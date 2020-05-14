@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="some_error">Error</string>
+    <string name="error_local">Local Error</string>
+    <string name="error_remote">Remote Error</string>
+    <string name="main">Main</string>
+    <string name="cash_converter">Cash Converter</string>
+    <string name="cashless_converter">Cashless Converter</string>
 </resources>
