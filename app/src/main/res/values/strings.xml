@@ -6,4 +6,10 @@
     <string name="main">Main</string>
     <string name="cash_converter">Cash Converter</string>
     <string name="cashless_converter">Cashless Converter</string>
+    <string name="no_data">No data available</string>
+    <string name="default_error_message">Error</string>
+    <string name="error_occured">Error happened</string>
+    <string name="ok">OK</string>
+    <string name="successful_operation">Successfull operation</string>
+    <string name="done">DONE</string>
 </resources>
