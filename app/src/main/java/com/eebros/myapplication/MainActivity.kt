@@ -2,15 +2,24 @@ package com.eebros.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.tayqa_toolbar_layout.*
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+
+    @Inject
+    lateinit var factory: ViewModelProviderFactory
+
+    lateinit var viewModel: MainActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        viewModel = ViewModelProvider(this, factory)[MainActivityViewModel::class.java]
 
         val sectionsPagerAdapter = MainActivityAdapter(
             this,
