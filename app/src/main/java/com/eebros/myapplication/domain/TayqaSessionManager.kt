@@ -2,20 +2,20 @@ package com.eebros.myapplication.domain
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import com.eebros.myapplication.data.remote.ResponseModel
+import com.eebros.myapplication.data.remote.GetBaseConvertResponse
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class TayqaSessionManager @Inject constructor() {
 
-    private val cachedUser: MediatorLiveData<ResponseModel> = MediatorLiveData()
+    private val cachedUser: MediatorLiveData<GetBaseConvertResponse> = MediatorLiveData()
 
-    fun authenticateUser(customerResponseModel: LiveData<ResponseModel>) {
+    fun authenticateUser(customerGetBaseConvertResponse: LiveData<GetBaseConvertResponse>) {
         cachedUser.value = null
-        cachedUser.addSource(customerResponseModel) {
+        cachedUser.addSource(customerGetBaseConvertResponse) {
             cachedUser.value = it
-            cachedUser.removeSource(customerResponseModel)
+            cachedUser.removeSource(customerGetBaseConvertResponse)
         }
     }
 

@@ -1,22 +1,21 @@
 package com.eebros.myapplication.data.remote.service
 
 import com.eebros.myapplication.Constants
-import com.eebros.myapplication.data.remote.Test
+import com.eebros.myapplication.data.remote.GetBaseConvertResponse
 import com.eebros.myapplication.data.remote.provider.ServiceProvider
 import io.reactivex.Observable
-import io.reactivex.Single
 import retrofit2.http.*
 
-interface MainApiService {
+interface ExchangeApiService {
     @Headers(
         Constants.CONTENT_TYPE_JSON,
         Constants.CHARSET,
         Constants.ACCEPT
     )
     @GET("rates.php")
-    fun test(): Single<Test>
+    fun getBaseConvert(@Query(value = "base") base: String): Observable<ArrayList<GetBaseConvertResponse>>
 
 }
 
-interface MainApiServiceProvider :
-    ServiceProvider<MainApiService>
+interface ExchangeApiServiceProvider :
+    ServiceProvider<ExchangeApiService>

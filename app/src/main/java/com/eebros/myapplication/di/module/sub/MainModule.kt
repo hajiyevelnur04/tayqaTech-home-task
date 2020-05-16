@@ -14,7 +14,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Named
 
-const val MLB_MAIN = "tayqa_main"
+const val TAYQA_MAIN = "tayqa_main"
 
 @Module
 class MainModule {
@@ -28,14 +28,14 @@ class MainModule {
 
     @Provides
     @MainScope
-    fun providesMainApiServiceProvider(@Named(MLB_MAIN) retrofit: Retrofit): MainApiServiceProvider =
+    fun providesMainApiServiceProvider(@Named(TAYQA_MAIN) retrofit: Retrofit): MainApiServiceProvider =
         object :
             MainApiServiceProvider {
             val mainApiService = retrofit.create(MainApiService::class.java)
             override fun getInstance() = mainApiService
         }
 
-    @Named(MLB_MAIN)
+    @Named(TAYQA_MAIN)
     @Provides
     @MainScope
     fun providesRetrofitInstance(

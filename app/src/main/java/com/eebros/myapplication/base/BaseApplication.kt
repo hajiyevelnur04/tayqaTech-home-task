@@ -1,6 +1,6 @@
 package com.eebros.myapplication.base
 
-import com.eebros.myapplication.DaggerAppComponent
+import com.eebros.myapplication.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 import dagger.android.DispatchingAndroidInjector

@@ -3,6 +3,7 @@ package com.eebros.myapplication.di
 import android.app.Application
 import com.eebros.myapplication.base.BaseApplication
 import com.eebros.myapplication.di.module.*
+import com.eebros.myapplication.di.module.sub.ExchangeModule
 import com.eebros.myapplication.domain.TayqaSessionManager
 import dagger.BindsInstance
 import dagger.Component
@@ -14,11 +15,11 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        ActivityBuildersModule::class,
-        FragmentBuildersModule::class,
+        ActivityOrFragmentBuildersModule::class,
         AppModule::class,
         ViewModelFactoryModule::class,
-        NetworkModule::class
+        NetworkModule::class,
+        ExchangeModule::class
     ]
 )
 interface AppComponent : AndroidInjector<BaseApplication> {
