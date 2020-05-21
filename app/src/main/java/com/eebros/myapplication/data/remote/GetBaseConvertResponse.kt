@@ -1,11 +1,13 @@
 package com.eebros.myapplication.data.remote
 
+import java.math.BigDecimal
+
 data class GetBaseConvertResponse (
     val code: String,
     val alphaCode: String,
     val numericCode: String,
     val name: String,
-    val rate: Long,
+    val rate: BigDecimal,
     val date: String,
-    val inverseRate: Long
+    var inverseRate: BigDecimal
 )

@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Tayqa Task</string>
     <string name="some_error">Error</string>
     <string name="error_local">Local Error</string>
     <string name="error_remote">Remote Error</string>
     <string name="main">Main</string>
-    <string name="cash_converter">Cash Converter</string>
-    <string name="cashless_converter">Cashless Converter</string>
+    <string name="cash_converter">Exchange</string>
+    <string name="cashless_converter">Converter</string>
     <string name="no_data">No data available</string>
     <string name="default_error_message">Error</string>
     <string name="error_occured">Error happened</string>
